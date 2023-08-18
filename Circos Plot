@@ -1,0 +1,238 @@
+# RScripts
+my trials for data visualization 
+> install.packages("circlize")
+also installing the dependencies ‘GlobalOptions’, ‘shape’, ‘colorspace’
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/GlobalOptions_0.1.2.tgz'
+Content type 'application/x-gzip' length 454432 bytes (443 KB)
+==================================================
+downloaded 443 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/shape_1.4.6.tgz'
+Content type 'application/x-gzip' length 784863 bytes (766 KB)
+==================================================
+downloaded 766 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/colorspace_2.1-0.tgz'
+Content type 'application/x-gzip' length 2621291 bytes (2.5 MB)
+==================================================
+downloaded 2.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/circlize_0.4.15.tgz'
+Content type 'application/x-gzip' length 3311717 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+
+The downloaded binary packages are in
+	/var/folders/8b/j9hwdf3n53sd1bvlvgh5bm600000gn/T//RtmpfaWa2Y/downloaded_packages
+> library(circlize)
+========================================
+circlize version 0.4.15
+CRAN page: https://cran.r-project.org/package=circlize
+Github page: https://github.com/jokergoo/circlize
+Documentation: https://jokergoo.github.io/circlize_book/book/
+
+If you use it in published research, please cite:
+Gu, Z. circlize implements and enhances circular visualization
+  in R. Bioinformatics 2014.
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(circlize))
+========================================
+
+> 
+> library(circlize)
+> 
+> # Sample insertion data (start and end positions)
+> insertion_data <- data.frame(
++     start = c(100, 300, 600),
++     end = c(200, 400, 700)
++ )
+> 
+> # Set up circular layout
+> circos.initialize()
+Error: Since `sectors` is not specified, row names of `xlim` are taken as
+`sectors`, thus `xlim` should be a two-column matrix with row names.
+> install.packages("GenomicRanges")
+Warning in install.packages :
+  package ‘GenomicRanges’ is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
+> library(GenomicRanges)
+Error in library(GenomicRanges) : 
+  there is no package called ‘GenomicRanges’
+> library(GenomicRanges)
+Error in library(GenomicRanges) : 
+  there is no package called ‘GenomicRanges’
+> install.packages("ggplot2")
+also installing the dependencies ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘cli’, ‘gtable’, ‘isoband’, ‘scales’
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/farver_2.1.1.tgz'
+Content type 'application/x-gzip' length 1933439 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/labeling_0.4.2.tgz'
+Content type 'application/x-gzip' length 60361 bytes (58 KB)
+==================================================
+downloaded 58 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/munsell_0.5.0.tgz'
+Content type 'application/x-gzip' length 241398 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/RColorBrewer_1.1-3.tgz'
+Content type 'application/x-gzip' length 52944 bytes (51 KB)
+==================================================
+downloaded 51 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/viridisLite_0.4.2.tgz'
+Content type 'application/x-gzip' length 1297462 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/cli_3.6.1.tgz'
+Content type 'application/x-gzip' length 1375489 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/gtable_0.3.3.tgz'
+Content type 'application/x-gzip' length 216685 bytes (211 KB)
+==================================================
+downloaded 211 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/isoband_0.2.7.tgz'
+Content type 'application/x-gzip' length 1870239 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/scales_1.2.1.tgz'
+Content type 'application/x-gzip' length 610060 bytes (595 KB)
+==================================================
+downloaded 595 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.2/ggplot2_3.4.3.tgz'
+Content type 'application/x-gzip' length 3339450 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+
+The downloaded binary packages are in
+	/var/folders/8b/j9hwdf3n53sd1bvlvgh5bm600000gn/T//RtmpfaWa2Y/downloaded_packages
+> library(ggplot2)
+> 
+> library(ggplot2)
+> # Calculate lengths of intervals
+> bed_data$length <- bed_data$end - bed_data$start
+Error: object 'bed_data' not found
+> # Create a data frame from the BED data
+> bed_data <- data.frame(
++     chrom = c("chr7", "chr6", "chr2", "chr5", "chr3", "chr1"),
++     start = c(117067403, 117512942, 131280907, 131346892, 234452355, 129503456),
++     end = c(117067666, 117513865, 131281440, 131347779, 543545776, 546707657)
++ )
+> 
+> # Display the data frame
+> print(bed_data)
+  chrom     start       end
+1  chr7 117067403 117067666
+2  chr6 117512942 117513865
+3  chr2 131280907 131281440
+4  chr5 131346892 131347779
+5  chr3 234452355 543545776
+6  chr1 129503456 546707657
+> library(circlize)
+> 
+> # Your provided BED data
+> bed1 <- data.frame(
++     chrom = c("chr7", "chr6", "chr2", "chr5", "chr3", "chr1"),
++     start = c(117067403, 117512942, 131280907, 131346892, 234452355, 129503456),
++     end = c(117067666, 117513865, 131281440, 131347779, 543545776, 546707657)
++ )
+> 
+> # Generate random BED data for bed2 (replace with your own data)
+> bed2 <- generateRandomBed(nr = 100)
+> bed2 <- bed2[sample(nrow(bed2), 20), ]
+> 
+> # Initialize Circos plot with ideograms
+> circos.initializeWithIdeogram()
+> 
+> # Generate genomic links between bed1 and bed2
+> circos.genomicLink(bed1, bed2, 
++                    col = rand_color(nrow(bed1), transparency = 0.5),
++                    border = NA
++ )
+Error: nrow of `region1` and `region2` differ. Please check the chromosome
+column and make sure all the chromosomes are in the circular layout.
+> # Generate random data for bed1 and bed2
+> set.seed(98)
+> bed1 <- generateRandomBed(nr = 10)
+> bed1 <- bed1[sample(nrow(bed1), 10), ]
+> bed2 <- generateRandomBed(nr = 10)
+> bed2 <- bed2[sample(nrow(bed2), 10), ]
+> print(bed1)
+     chr     start       end     value1
+14 chr14  29048189  99765991  0.3264489
+4   chr4 127467034 183443127  0.6077645
+5   chr5  84171996 119110890  0.3092679
+19  chrX  43879528  75795041 -0.4812481
+3   chr3 139015120 147145969  0.2760711
+8   chr8  84378020 134420372 -0.1038671
+18 chr18  22746702  66904930  0.3063708
+9   chr9   2267064  78246453 -0.9590572
+7   chr7  11923197 117266999 -0.9644364
+13 chr13  63895083  92697796  0.3612791
+> print(bed2)
+     chr     start       end      value1
+11 chr11  96816911 113852773  0.46388210
+9   chr9   2922321 112923017  1.14403079
+19  chrX  69184414  70710275 -0.24895976
+14 chr14  30010944  32979100  0.01346641
+18 chr18   2303304   4224372  0.26772301
+13 chr13  68768668 114568488  0.36636637
+3   chr3 128423418 143623406  0.54964565
+2   chr2     78240  25294931  0.71025329
+6   chr6  21322712 169989467  0.21338331
+15 chr15  28518854  69763292 -0.17363497
+> 
+> # Initialize Circos plot with ideograms
+> circos.initializeWithIdeogram()
+> 
+> # Generate genomic links between bed1 and bed2
+> colors <- adjustcolor("blue", alpha.f = 0.5)  # Adjust alpha (transparency) of the color
+> circos.genomicLink(bed1, bed2,
++                    col = colors,
++                    border = NA)
+> 
+> # this one works but it is random data. if you want to do with your own you can 
+> write down your data frame like this: library(circlize)
+Error: unexpected symbol in "write down"
+> library(circlize)
+> 
+> # Your own bed1 data
+> bed1 <- data.frame(
++     chr = c("chr1", "chr2", "chr3"),  # Chromosome names
++     start = c(1000000, 300000, 1250060),  # Start positions
++     end = c(1500000, 2200000, 3500000)  # End positions
++ )
+> 
+> # Your own bed2 data
+> bed2 <- data.frame(
++     chr = c("chr1", "chr2", "chr3"),  # Chromosome names
++     start = c(1200000, 2200000, 3300000),  # Start positions
++     end = c(6600000, 2400000, 3400000),  # End positions
++     value1 = c(0.5, -0.2, 0.7)  # Additional data column (if needed)
++ )
+> 
+> # Initialize Circos plot with ideograms
+> circos.initializeWithIdeogram()
+> 
+> # Generate genomic links between bed1 and bed2
+> colors <- adjustcolor("blue", alpha.f = 0.5)  # Adjust alpha (transparency) of the color
+> circos.genomicLink(bed1, bed2,
++                    col = colors,
++                    border = NA)
